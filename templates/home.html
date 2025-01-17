@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    
+        <!-- main intro -->
+        <section id="home">
+          <div id="index" class="container-fluid">
+             <h1 class="cl"><b>Raise Your Ticket</b></h1>
+             <h2 class="cmm">सर्वाणि समस्यानि एकं मञ्चम्</h2>
+             <h4 class="cm"><br><br><br>Get your issues resolved here!<br>Fast,easy & effective!</h4>
+             <img src="../media/others/ticket.png" class="tick" alt="bomma">
+          </div>
+        </section>
+        <!-- main section ends -->
+
+          <!-- features of RYT -->
+          {% if not request.user.is_superuser %}
+      <section id="features">
+        <div class="mb-5 feattext">
+          <b>Features</b> 
+        </div>
+        
+        <div class="row">
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-hand fa-4x" id="icon"></i>
+            <h3><b>Raise a ticket</b></h3>
+            <p>Solve your issues ASAP!</p>
+            <a href="{% url 'dept_page' %}" class="btn btn-dark">Click Here
+              <span class="badge badge-light"></span>
+            </a>
+          </div>
+
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-chart-simple fa-4x" id="icon"></i>
+            <h3><b>My Raised Tickets</b></h3>
+            <p>Know Your Tickets Status</p>
+            <a href="{% url 'my_tkts' 'raised_tkts' %}" class="btn btn-dark">Check Status
+              {% if new_replies != 0 %}
+              <span class="badge rounded-pill badge-notification bg-danger">{{new_replies}}</span>
+              {% endif %}
+            </a>
+          </div>
+
+          
+
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-bullhorn fa-4x" id="icon"></i>
+            <h3><b>Announcements</b></h3>
+            <p>Know the latest</p>
+            <a href="{% url 'announcements' %}" class="btn btn-dark">Browse Now
+              {% if new_announcements != 0 %}
+              <span class="badge rounded-pill badge-notification bg-danger">{{new_announcements}}</span>
+              {% endif %}
+            </a>
+          </div>
+      </div>
+      
+    </section>
+    {% endif %}
+    {% endblock %}
+
+<input type="file">

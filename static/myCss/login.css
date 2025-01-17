@@ -1,0 +1,129 @@
+body 
+{
+  background-image: url("/media/others/login.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0B0505;
+} 
+
+.content
+{
+  margin-top: 8%;
+}
+
+
+#head{
+    text-align: center;
+    font-size: 37px;
+    font-weight:bolder;
+    margin-bottom: 0px;
+}
+
+form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+
+input{
+    width: 100%;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    color: white;
+    font-weight:200;
+    background-color: rgba(1,1,1,0);
+    border: none;
+    border-radius: 0%;
+    border-bottom: solid white .1vh
+  }
+
+#id_userID
+{
+    color: white;
+    font-weight:200 ;
+    background-color: rgba(1,1,1,0);
+    border: none;
+    border-radius: 0%; 
+    border-bottom: solid wheat .1vh
+}
+
+#id_password
+{
+  color: white;
+  font-weight:200 ;  
+  background-color: rgba(1,1,1,0);
+  width: 96.201%;
+  border: none;
+  border-radius: 0%; 
+  border-bottom: solid wheat .1vh
+}
+
+input:hover
+{
+  border: none;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+
+button {
+    background-color: #030804;
+    color: white;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 0%;
+    font-weight:200 ;  
+    background-color: rgba(1,1,1,0);
+  }
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.headingsContainer{
+    text-align: center;
+}
+
+.mainContainer{
+    padding: 16px;
+}
+
+form i {
+  float:right;
+  margin-top: 24px;
+  border-bottom: solid wheat .1vh;
+  cursor: pointer;
+}
+
+.login_btn{
+ border: 2px solid white;
+ width: 20%;
+ border-radius: 8px;
+ margin-top: 5%;
+}
+
+.login_btn:hover{
+  background-color: white;
+  color: #030804;
+
+}
+@media screen and (max-width: 600px) {
+  form{
+    width: 25rem;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  form{
+    width: 20rem;
+  }
+}

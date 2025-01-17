@@ -1,0 +1,91 @@
+.avatar{
+    border-radius: 50%;
+    height: 150px;
+}
+
+.row 
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+#us
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.ustext
+{
+    
+    font-family: 'Montserrat' sans-serif;
+    text-align: center;
+    
+    font-size: 50px;
+    font-weight: 100px;
+}
+
+
+/* vision */
+.visionhead
+{
+    font-family: 'Montserrat' sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 2%;
+}
+
+.visionbody
+{
+    text-align: center;
+    max-width: 70%;
+    margin-left: 15%;
+    font-size:20px;
+    margin-bottom: 3%;
+    margin-top:2%;
+}
+
+
+/* mission */
+
+.missionhead
+{
+    font-family: 'Montserrat' sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100px;
+}
+
+.missionbody
+{
+    text-align: center;
+    max-width: 70%;
+    margin-left: 15%;
+    font-size:20px;
+    margin-bottom: 5%;
+    margin-top:3%;
+}
+
+/* feedback */
+
+.feedhead
+{
+    font-family: 'Montserrat' sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.feedbody
+{
+    text-align: center;
+    max-width: 70%;
+    margin-left: 15%;
+    font-size:20px;
+    margin-bottom: 7%;
+}

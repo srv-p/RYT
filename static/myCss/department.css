@@ -1,0 +1,97 @@
+/* css for the department cards and frt cards  */
+
+.card{
+    text-align: center;
+    margin: 37.5px;
+}
+
+.card-text{
+    /* background: #6ECF7E;
+    background: linear-gradient(to right, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: gray;
+}
+
+.card:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+#caard
+{
+    height: 330px;
+    position: relative;
+    padding: 0;
+    box-shadow: 0 0 1em gray;
+}
+
+#cardcomp
+{
+    height: 280px;
+    position: relative;
+    padding: 0;
+    box-shadow: 0 0 1em gray;
+}
+
+#img
+{
+    width: 100%;
+    height:160px;
+}
+
+.depttext
+{
+    padding-top: 3%;
+    background: #25CC0F;
+    background: linear-gradient(to bottom right, #25CC0F 0%, #9E3212 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100px;
+}
+
+.name
+{
+    background: #25CC0F;
+    background: linear-gradient(to bottom right, #25CC0F 0%, #9E3212 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 200px;
+}
+
+.frts-title{
+    font-family: 'Gabriola';
+    background: #FF0000;
+    background: linear-gradient(to top right, #FF0000 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.butdept
+{
+    position: absolute;
+    top:120px;
+    left: 50px;
+    margin-top: 50%;
+}
+
+.scroll-text{
+    display: block;
+    width: 100%;
+    transform: translateX(70%);
+    animation: move 15s linear infinite;
+    color: red;
+    overflow-x: hidden !important;
+}
+
+.scroll-text:hover{
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    to{transform: translateX(-100%);}
+}

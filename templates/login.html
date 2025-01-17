@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myCss/login.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/css/all.min.css'%}"
+    />
+</head>
+
+<body>
+    <div class="content">
+    <form action="{% url 'signin' %}" method="post">
+        {% csrf_token %}
+        
+
+            <div class="headingsContainer">
+                <p id="head">Welcome to RYT</p>
+                <p>Login with your registration number and password</p>
+            </div>
+
+            <div class="mainContainer">
+            
+                <label for="regd">Your registration number</label>
+                {{form.userID}}
+
+                <br><br>
+
+                <label for="password">Your password</label>
+                <div>
+                <input type="password" name="password" placeholder="Enter Password" required id="id_password">
+                 <a style="display: inline; position: relative; bottom: 1px; right: 2px;"><i class="fa fa-eye-slash" id="togglePassword"></i></a>
+                </div>
+                <br>
+                {% if msg != '' %}
+                <div class="alert alter-danger" style="font-weight: 1000; font-size: 18px;; color: rgb(0, 0, 0); -webkit-text-stroke-color: rgb(255, 0, 0); -webkit-text-stroke-width: 0.4px;">
+                    <bold>{{msg}}</bold>
+                </div>
+                {% endif %}
+
+                <input style="width:fit-content;margin-top: 5%;" type="radio" value="user" name="user_type" id="reg"/>
+                    <label style="margin-right: 5%;" for="reg"><b>As a User</b></label>
+                    
+                    <input style="width:fit-content;" type="radio" value="dept" name="user_type" id="dept"/>
+                    <label for="dept"><b>As a Department Member</b></label><br>
+                <button class="login_btn" type="submit"><b style="position: relative; bottom: 9px;">Login</b></button>    
+                
+
+
+            </div>
+     
+    </form>
+</div>
+</body>
+
+        <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#id_password");
+
+        togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the icon
+        this.classList.toggle("fa-eye");
+        });
+        </script>
+</html>

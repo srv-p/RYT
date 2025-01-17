@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    
+        <!-- main intro -->
+        
+        <section id="dept_home">
+          <div id="index" class="container-fluid">
+             <h1 class="heading"><b>{{request.user.dept_name}}</b></h1>
+             <h2 class="cmm">Biglietto è la soluzione</h2>
+             <h4 class="cm"><br><br><br>Solve your department issues here<br>Effectively!!</h4>
+             <img src="../media/others/ticket.png" class="tick" alt="bomma">
+          </div>
+        </section>
+        
+        {% if not request.user.is_superuser %}
+        <section id="features">
+            <div class="mb-5 feattext">
+              <b>Features</b> 
+            </div>
+            
+            <div class="row">            
+              <div class="feature-box col-lg-4" style="margin-bottom: 8%;">
+                <i class="icon fa-solid fa-ticket fa-4x" id="dept_icon"></i>
+                <h3><b>{{request.user.dept_name}}</b></h3>
+                <p>Clear issues of {{request.user.dept_name}} department</p>
+                <a href="{% url 'my_tkts' 'dept_tkts' %}" class="btn btn-dark">Department Tickets
+                {% if new_tkts_and_replies != 0 %}
+                <span class="badge rounded-pill badge-notification" style="background-color: #f88b0e;">{{new_tkts_and_replies}}</span>
+                {% endif %}
+                </a>
+            </div>
+
+            <div class="feature-box col-lg-4" style="margin-bottom: 8%;">
+                <i class="icon fa-solid fa-cog fa-4x" id="dept_icon"></i>
+                <h3><b>FRT Settings</b></h3>
+                <p>Manage {{request.user.dept_name}} Dept FRTs</p>
+                <a href="{% url 'frt_page' %}" class="btn btn-dark">Click Here
+                  <span class="badge badge-light"></span>
+                </a>
+              </div>
+
+              <div class="feature-box col-lg-4" style="margin-bottom: 8%;">
+                <i class="icon fa-solid fa-bullhorn fa-4x" id="dept_icon"></i>
+                <h3><b>Announcements</b></h3>
+                <p>Look into {{request.user.dept_name}} announcements</p>
+                <a href="{% url 'manage_announcements' %}" class="btn btn-dark">Manage Now
+                  <span class="badge badge-light"></span>
+                </a>
+              </div>
+
+              {% if request.user.is_hod %}
+              <div class="feature-box col-lg-4" style="margin-bottom: 8%;">
+                <i class="icon fas fa-user-shield fa-4x" id="dept_icon"></i>
+                <h3><b>Permissions</b></h3>
+                <p>Manage permissions to {{request.user.dept_name}} members</p>
+                <a href="{% url 'permissions' %}" class="btn btn-dark">Click Here
+                  <span class="badge badge-light"></span>
+                </a>
+              </div>
+              {% endif %}
+
+          </div>
+          
+        </section>
+        {% endif %}
+        {% endblock %}
